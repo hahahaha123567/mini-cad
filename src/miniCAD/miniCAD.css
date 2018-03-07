@@ -1,0 +1,86 @@
+#body {
+    -fx-pref-width: 1000px;
+    -fx-pref-height: 600px;
+    -fx-spacing: 10px;
+}
+#toolBox {
+
+}
+.tool {
+
+}
+Button {
+    -fx-font-size: 20px;
+}
+FlowPane {
+    -fx-hgap: 2px;
+    -fx-vgap: 2px;
+}
+#usColor {
+    -fx-spacing: 5px;
+}
+#allColor {
+    -fx-spacing: 2px;
+}
+.gradeColor {
+    -fx-spacing: 2px;
+}
+#canvas {
+    -fx-pref-height: 1000px;
+    -fx-background-color: white;
+}
+
+#buttonLine {
+    -fx-graphic: "/image/line.png";
+}
+#buttonRectangle {
+    -fx-graphic: "/image/rectangle.png";
+}
+#buttonCircle {
+    -fx-graphic: "/image/circle.png";
+}
+#buttonText {
+    -fx-graphic: "/image/text.png";
+}
+#buttonBigger {
+    -fx-graphic: "/image/bigger.png";
+}
+#buttonSmaller {
+    -fx-graphic: "/image/smaller.png";
+}
+#buttonBold {
+    -fx-graphic: "/image/bold.png";
+}
+#buttonLight {
+    -fx-graphic: "/image/light.png";
+}
+#buttonDelete {
+    -fx-graphic: "/image/delete.png";
+}
+#buttonNico {
+    -fx-base: #ffc0cb;
+}
+#buttonElie {
+    -fx-base: #00ffff;
+}
+#buttonNozomi {
+    -fx-base: #800080;
+}
+#buttonHonoka {
+    -fx-base: #ffb11b;
+}
+#buttonUmi {
+    -fx-base: #0000ff;
+}
+#buttonKotori {
+    -fx-base: #ffffff;
+}
+#buttonMaki {
+    -fx-base: #ff0000;
+}
+#buttonRin {
+    -fx-base: #ffff00;
+}
+#buttonHanayo {
+    -fx-base: #adff2f;
+}

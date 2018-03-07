@@ -1,0 +1,75 @@
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Separator?>
+
+<VBox fx:id="body"
+        fx:controller="miniCAD.Controller"
+        stylesheets="/miniCAD/miniCAD.css"
+        xmlns:fx="http://javafx.com/fxml">
+    <MenuBar>
+        <Menu fx:id="menuFile" text="File">
+            <MenuItem fx:id="itemOpen" text="Open" onAction="#itemOpenClicked"/>
+            <MenuItem fx:id="itemSave" text="Save" onAction="#itemSaveClicked"/>
+        </Menu>
+    </MenuBar>
+    <HBox fx:id="toolBox">
+        <FlowPane fx:id="shape" styleClass="tool">
+            <Button fx:id="buttonLine" onAction="#buttonLineClicked"/>
+            <Button fx:id="buttonRectangle" onAction="#buttonRectangleClicked"/>
+            <Button fx:id="buttonCircle" onAction="#buttonCircleClicked"/>
+            <Button fx:id="buttonText" onAction="#buttonTextClick"/>
+        </FlowPane>
+        <Separator orientation="VERTICAL"/>
+        <FlowPane fx:id="size" styleClass="tool">
+            <Button fx:id="buttonBigger" onAction="#buttonBiggerClicked"/>
+            <Button fx:id="buttonSmaller" onAction="#buttonSmallerClicked"/>
+        </FlowPane>
+        <Separator orientation="VERTICAL"/>
+        <FlowPane fx:id="weight" styleClass="tool">
+            <Button fx:id="buttonBold" onAction="#buttonBoldClicked"/>
+            <Button fx:id="buttonLight" onAction="#buttonLightClicked"/>
+        </FlowPane>
+        <Separator orientation="VERTICAL"/>
+        <FlowPane fx:id="color" styleClass="tool">
+            <HBox fx:id="usColor">
+                <VBox fx:id="allColor">
+                    <HBox fx:id="thirdGrade" styleClass="gradeColor">
+                        <Button fx:id="buttonNico" text="  " onAction="#buttonNicoClicked"/>
+                        <Button fx:id="buttonElie" text="  " onAction="#buttonElieClicked"/>
+                        <Button fx:id="buttonNozomi" text="  " onAction="#buttonNozomiClicked"/>
+                    </HBox>
+                    <HBox fx:id="secondGrade" styleClass="gradeColor">
+                        <Button fx:id="buttonHonoka" text="  " onAction="#buttonHonokaClicked"/>
+                        <Button fx:id="buttonUmi" text="  " onAction="#buttonUmiClicked"/>
+                        <Button fx:id="buttonKotori" text="  " onAction="#buttonKotoriClicked"/>
+                    </HBox>
+                    <HBox fx:id="firstGrade" styleClass="gradeColor">
+                        <Button fx:id="buttonMaki" text="  " onAction="#buttonMakiClicked"/>
+                        <Button fx:id="buttonRin" text="  " onAction="#buttonRinClicked"/>
+                        <Button fx:id="buttonHanayo" text="  " onAction="#buttonHanayoClicked"/>
+                    </HBox>
+                </VBox>
+                <ColorPicker fx:id="colorPicker" onAction="#colorPickerClicked"/>
+            </HBox>
+        </FlowPane>
+        <Separator orientation="VERTICAL"/>
+        <FlowPane fx:id="delete" styleClass="tool">
+            <Button fx:id="buttonDelete" onAction="#buttonDeleteClicked"/>
+        </FlowPane>
+    </HBox>
+    <BorderPane fx:id="canvas"
+                onMouseMoved="#canvasMoved"
+                onMouseClicked="#canvasClicked"
+                onMousePressed="#canvasPressed"
+                onMouseDragged="#canvasDragged">
+        <!--content-->
+    </BorderPane>
+</VBox>
